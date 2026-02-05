@@ -14,7 +14,7 @@ app.post('/cadastro', (req, res) => {
         preco: req.body.preco,
         descricao: req.body.descricao
     }).then(function(){
-        res.send("Produto cadastrado")
+        res.send("Produto cadastradoo")
     }).catch(function(erro){
          res.send("Error ao cadastrar" + erro)
     })
