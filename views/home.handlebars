@@ -1,0 +1,10 @@
+<h1>Listas de pessoas:</h1>
+
+{{#each pessoas}}
+<h1>{{nome}}</h1>
+<p>{{sobrenome}}</p>
+<p>Idade: {{idade}}</p>
+<a href="/deletar/{{id}}"><button>Deletar</button></a>
+<hr>
+{{/each}}
+
