@@ -5,6 +5,7 @@ const {engine} = require('express-handlebars')
 const Pessoas = require('./models/Pessoas')
 
 const path = require('path')
+app.use(express.static(path.join(__dirname, 'public')))
 
 //config handlebars
 app.engine('handlebars', engine({defaultLayout: 'main'}))
@@ -13,8 +14,6 @@ app.set('view engine','handlebars')
 //config body-parser
 app.use(express.urlencoded({extended:false}))
 app.use(express.json())
-
-app.use(express.static(path.join(__dirname, 'public')))
 
 //rotas
 app.get('/', function(req,res){
@@ -46,6 +45,8 @@ app.get('/deletar/:id', function(req, res){
     res.send('error'+ error)
   })
 })
+
+
 
 app.listen('8081', function(){
     console.log('Rodando servidor')
