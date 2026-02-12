@@ -3,7 +3,7 @@ const app = express()
 
 const {engine} = require('express-handlebars')
 const Pessoas = require('./models/Pessoas')
-
+//bootstrap
 const path = require('path')
 app.use(express.static(path.join(__dirname, 'public')))
 
