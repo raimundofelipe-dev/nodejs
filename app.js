@@ -34,7 +34,7 @@ app.post('/add', function(req, res){
     }).then(function(){
         res.redirect('/')
     }).catch(function(error){
-        res.send('falha ao cadastrar usuario' + error)
+        res.send('falha ao cadastrar usuarioo' + error)
     })
 })
 
