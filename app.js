@@ -42,7 +42,7 @@ app.get('/deletar/:id', function(req, res){
     Pessoas.destroy({where: {'id' : req.params.id}}).then(function(){
         res.redirect('/cadastro')
     }).catch(function(error){
-    res.send('errorsr'+ error)
+    res.send('errorr'+ error)
   })
 })
 
