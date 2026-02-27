@@ -30,7 +30,7 @@ app.post('/add', function(req, res){
     Pessoas.create({
         nome:req.body.nome,
         sobrenome:req.body.sobrenome,
-        idade:req.body.idade
+        idade:req.body.idade 
     }).then(function(){
         res.redirect('/')
     }).catch(function(error){
@@ -49,5 +49,5 @@ app.get('/deletar/:id', function(req, res){
 
 
 app.listen('8081', function(){
-    console.log('Rodando servidorrr')
+    console.log('Rodando servidor')
 })
